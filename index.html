@@ -7,55 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <body>
-    <header>
-        <div class="logo">Armazém da Sra. Lourdes</div>
-        <div class="cart-icon" onclick="toggleCarrinho()">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cartCount">0</span>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="cadastro">
-            <h2>Cadastro</h2>
-            <label for="nomeCliente">Nome</label>
-            <input type="text" id="nomeCliente" placeholder="Seu nome">
-            <label for="telefoneCliente">WhatsApp</label>
-            <input type="tel" id="telefoneCliente" placeholder="ex: 41999999999">
-        </section>
-
-        <section id="catalogo">
-            <h2>Produtos</h2>
-            <div class="produtos-grid">
-                <div class="produto">
-                    <img src="https://via.placeholder.com/180x120?text=Geleia" alt="Geleia Caseira">
-                    <h3>Geleia Caseira</h3>
-                    <p>R$10</p>
-                    <button onclick="adicionarAoCarrinho('Geleia Caseira', 10)">Adicionar</button>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/180x120?text=Tomate" alt="Tomate Orgânico">
-                    <h3>Tomate Orgânico</h3>
-                    <p>R$5</p>
-                    <button onclick="adicionarAoCarrinho('Tomate Orgânico', 5)">Adicionar</button>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/180x120?text=Pão+de+Queijo" alt="Pão de Queijo">
-                    <h3>Pão de Queijo</h3>
-                    <p>R$8</p>
-                    <button onclick="adicionarAoCarrinho('Pão de Queijo', 8)">Adicionar</button>
-                </div>
-                <div class="produto">
-                    <img src="https://via.placeholder.com/180x120?text=Mel+Orgânico" alt="Mel Orgânico">
-                    <h3>Mel Orgânico</h3>
-                    <p>R$12</p>
-                    <button onclick="adicionarAoCarrinho('Mel Orgânico', 12)">Adicionar</button>
-                </div>
-            </div>
-        </section>
-    </main>
-  
+  <header>
+    <h1>Armazém da Dona Lourdes</h1>
+    <p>Produtos frescos direto do campo</p>
+  </header>
   <main id="product-list"></main>
   <section id="cart">
     <h2>Seu Pedido</h2>
