@@ -2,17 +2,17 @@ let carrinho = [];
 let total = 0;
 
 function adicionarAoCarrinho(nomeProduto, precoProduto) {
-    // Adiciona o produto ao carrinho
+    
     carrinho.push({ nome: nomeProduto, preco: precoProduto });
 
-    // Atualiza o contador do carrinho
+   
     atualizarCarrinho();
 
-    // Exibe o total
+    
     total += precoProduto;
     document.getElementById("total").innerText = total.toFixed(2);
 
-    // Exibe os itens no carrinho
+   
     atualizarItensCarrinho();
 }
 
@@ -20,7 +20,7 @@ function atualizarCarrinho() {
     const cartCount = document.getElementById("cartCount");
     cartCount.innerText = carrinho.length;
     
-    // Abre ou fecha o carrinho dependendo do número de itens
+  
     const carrinhoElement = document.getElementById("carrinho");
     if (carrinho.length > 0) {
         carrinhoElement.classList.remove("carrinho-fechado");
@@ -33,7 +33,7 @@ function atualizarCarrinho() {
 
 function atualizarItensCarrinho() {
     const itensCarrinho = document.getElementById("itensCarrinho");
-    itensCarrinho.innerHTML = ''; // Limpa os itens do carrinho
+    itensCarrinho.innerHTML = ''; 
 
     carrinho.forEach(item => {
         const li = document.createElement("li");
