@@ -64,3 +64,40 @@ function finalizarPedido() {
     const whatsappUrl = `https://wa.me/5599999999999?text=${encodeURIComponent(mensagem)}`;
     window.open(whatsappUrl, "_blank");
 }
+
+function atualizarItensPedido() {
+    const listaPedido = document.getElementById("cart-items");
+    listaPedido.innerHTML = '';
+
+    carrinho.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+        listaPedido.appendChild(li);
+    });
+
+    
+    let totalEl = document.getElementById("cart-total");
+    if (!totalEl) {
+        totalEl = document.createElement("p");
+        totalEl.id = "cart-total";
+        document.getElementById("cart").appendChild(totalEl);
+    }
+    totalEl.innerHTML = `<strong>Total:</strong> R$${total.toFixed(2)}`;
+}
+
+
+function atualizarItensCarrinho() {
+    const itensCarrinho = document.getElementById("itensCarrinho");
+    itensCarrinho.innerHTML = '';
+
+    carrinho.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+        itensCarrinho.appendChild(li);
+    });
+
+    atualizarItensPedido(); // 
+}
+
+
+document.getElementById("checkout-button").addEventListener("click", finalizarPedido);
