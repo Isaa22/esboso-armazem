@@ -1,4 +1,4 @@
-
+/* Estilos gerais do body e cabeçalho */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -39,20 +39,7 @@ header {
     font-size: 12px;
 }
 
-.container {
-    max-width: 960px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-#cadastro input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
+/* Produtos */
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -93,6 +80,7 @@ header {
     cursor: pointer;
 }
 
+/* Carrinho */
 #carrinho {
     position: fixed;
     top: 0;
@@ -145,6 +133,7 @@ header {
     cursor: pointer;
 }
 
+/* Estilos adicionais para o layout */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -179,6 +168,7 @@ header {
     border-radius: 5px;
 }
 
+/* Botão do WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -238,6 +228,7 @@ header {
     font-size: 18px;
 }
 
+/* Responsividade */
 @media (max-width: 600px) {
     header h1 {
         font-size: 22px;
