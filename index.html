@@ -116,19 +116,14 @@
         <h2>Seu Carrinho</h2>
         <ul id="itensCarrinho"></ul>
         <p>Total: R$<span id="total">0</span></p>
-        <button onclick="finalizarPedido()">Finalizar Pedido</button>
+        <button id="finalizarPedido" onclick="finalizarPedido()">Finalizar Pedido</button> <!-- Correção: Removido o outro botão -->
     </aside>
-
-    <section id="cart">
-        <h2>Seu Pedido</h2>
-        <ul id="cart-items"></ul>
-    </section>
 
     <a href="https://wa.me/5543998306254" class="whatsapp-button" target="_blank">Fale conosco no WhatsApp</a>
 
     <script src="script.js"></script>
     <script>
-        
+        // Funções do carrinho
         let carrinho = [];
         let total = 0;
 
@@ -175,26 +170,4 @@
         }
 
         function finalizarPedido() {
-            if (carrinho.length === 0) {
-                alert("Seu carrinho está vazio!");
-                return;
-            }
-            const pedido = carrinho.map(item => `${item.nome} - R$${item.preco.toFixed(2)}`).join('\n');
-            const mensagem = `Olá, gostaria de fazer um pedido:\n\n${pedido}\n\nTotal: R$${total.toFixed(2)}`;
-            const whatsappUrl = `https://wa.me/5543998306254?text=${encodeURIComponent(mensagem)}`;
-            window.open(whatsappUrl, "_blank");
-        }
-
-        
-        const pagamentoLink = "00020126580014br.gov.bcb.pix0136a3fa6831-d2da-49ac-b31e-55bbcbe09e805204000053039865802BR5925MARIA EDUARDA GOMES ARRUD6009Sao Paulo62290525REC680EEEDEB552408665825263043C9D";
-        QRCode.toCanvas(document.getElementById('qrcode'), pagamentoLink, function (error) {
-            if (error) {
-                console.error(error);
-                alert("Erro ao gerar o QR Code.");
-            } else {
-                console.log('QR Code gerado!');
-            }
-        });
-    </script>
-</body>
-</html>
+            if (
