@@ -100,4 +100,4 @@ function atualizarItensCarrinho() {
 }
 
 
-document.getElementById("checkout-button").addEventListener("click", finalizarPedido); 
+document.getElementById("checkout-button").addEventListener("click", finalizarPedido);
