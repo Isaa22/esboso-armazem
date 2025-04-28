@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
     <header>
@@ -103,6 +104,12 @@
                 </div>
             </div>
         </section>
+
+        <section id="pagamento">
+            <h2>Pagamento</h2>
+            <p>Escaneie o QR Code abaixo para realizar o pagamento:</p>
+            <div id="qrcode"></div>
+        </section>
     </main>
 
     <aside id="carrinho" class="carrinho-fechado">
@@ -121,5 +128,15 @@
     <a href="https://wa.me/5543998306254" class="whatsapp-button" target="_blank">Fale conosco no WhatsApp</a>
 
     <script src="script.js"></script>
+    <script>
+       
+        const pagamentoLink = "00020126580014br.gov.bcb.pix0136a3fa6831-d2da-49ac-b31e-55bbcbe09e805204000053039865802BR5925MARIA EDUARDA GOMES ARRUD6009Sao Paulo62290525REC680EEEDEB552408665825263043C9D";
+
+       
+        QRCode.toCanvas(document.getElementById('qrcode'), pagamentoLink, function (error) {
+            if (error) console.error(error);
+            console.log('QR Code gerado!');
+        });
+    </script>
 </body>
 </html>
