@@ -94,7 +94,7 @@ function atualizarItensCarrinho() {
 
 function gerarQRCode(linkPagamento) {
     const qrCodeContainer = document.getElementById('qrcode');
-    qrCodeContainer.innerHTML = ''; // Limpar qualquer QR Code anterior
+    qrCodeContainer.innerHTML = ''; 
     QRCode.toCanvas(qrCodeContainer, linkPagamento, function (error) {
         if (error) {
             console.error(error);
@@ -107,5 +107,6 @@ function gerarQRCode(linkPagamento) {
 
 
 const pagamentoLink = "00020126580014br.gov.bcb.pix0136a3fa6831-d2da-49ac-b31e-55bbcbe09e805204000053039865802BR5925MARIA EDUARDA GOMES ARRUD6009Sao Paulo62290525REC680EEEDEB552408665825263043C9D";
+
 
 document.getElementById("checkout-button").addEventListener("click", finalizarPedido);
